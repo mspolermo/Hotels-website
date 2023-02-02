@@ -1,0 +1,124 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  html {
+    font-family: sans-serif;
+  }
+  
+  a {
+    text-decoration: none;
+  }
+  
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  
+  img {
+    max-width:100%;
+  }
+  .container{
+    max-width: 1200px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+  }  
+  .section-heading {
+    display: block;
+    padding-left: 40px;
+    margin-top: 20px;
+  }
+
+  /*Header*/
+  .header-initial-container {
+    display: flex;
+    justify-content:space-between; 
+    margin-bottom: 30px;
+  }
+  .header-navigation-container {
+    display: flex;
+    justify-content:space-between;  
+    margin-bottom: 70px;
+  }
+  .header-nav-list {
+    display: flex;
+    justify-content:space-evenly;  
+  }
+  .header-nav-item {
+    padding-left: 45px;
+  }
+
+  /*Special*/
+  .section-speciall-addblock{
+    display: flex;
+    margin-bottom: 70px;
+  }
+  .section-special-left{
+    flex: 1 1 50%;
+    margin-right: 24px;
+    align-items: stretch;
+  }
+.section-special-left-top {
+    margin-bottom: 24px;
+}
+.section-special-right{
+    flex: 1 1 50%;   
+}
+
+/*About*/
+.section-about {
+    margin-bottom: 70px;  
+}
+
+/*Uslugi*/
+.section-uslugi {
+    margin-bottom: 70px;  
+}
+.section-uslugi-list{
+    display: flex;
+    flex-wrap: wrap;
+}
+.section-uslugi-item {
+    flex: 1 1 48%;
+    margin-bottom: 24px;   
+}
+.section-uslugi-item:not(:nth-child(2n)) {
+    margin-right: 24px;
+}
+
+/*Preimushestva*/
+.section-preimushestva {
+    margin-bottom: 70px; 
+}
+.section-preimushestva-list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.section-preimushestva-item {
+    flex: 1 1 23%;
+    margin-bottom: 22px;   
+    
+}
+.section-preimushestva-item:not(:nth-child(4n)) {
+    margin-right: 22px;
+}
+/*Razmeshenie*/
+.section-razmeshenie {
+    margin-bottom: 70px; 
+}
+.section-razmeshenie-list {
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+.section-razmeshenie-item{
+    flex: 1 1 31%;
+    margin-bottom: 24px; 
+}
+.section-razmeshenie-item:not(:nth-child(3n)) {
+    margin-right: 24px;
+}
