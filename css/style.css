@@ -1,11 +1,46 @@
+/* MullerLight */
+@font-face {
+  font-family: 'Muller';
+  font-style: normal;
+  font-weight: 300;
+  src: url('/fonts/MullerLight.woff2') format('woff2'), 
+       url('/fonts/MullerLight.woff') format('woff');
+}
+/* MullerRegular */
+@font-face {
+  font-family: 'Muller';
+  font-style: normal;
+  font-weight: 400;
+  src: url('/fonts/MullerRegular.woff2') format('woff2'),
+       url('/fonts/MullerRegular.woff') format('woff');
+}
+/* MullerMedium*/
+@font-face {
+  font-family: 'Muller';
+  font-style: normal;
+  font-weight: 500;
+  src: url('/fonts/MullerMedium.woff2') format('woff2'), 
+       url('/fonts/MullerMedium.woff') format('woff');
+}
+/* MullerBold*/
+@font-face {
+  font-family: 'Muller';
+  font-style: normal;
+  font-weight: 700;
+  src: url('/fonts/MullerBold.woff2') format('woff2'), 
+       url('/fonts/MullerBold.woff') format('woff');
+}
+
 * {
     box-sizing: border-box;
   }
-  
+
   html {
-    font-family: sans-serif;
+    font-family: 'Muller', sans-serif;
   }
-  
+  body {
+    background-color: #E5E5E5;
+  }
   a {
     text-decoration: none;
   }
@@ -31,26 +66,74 @@
     padding-left: 40px;
     margin-top: 20px;
   }
+  .btn{
+    font-style: 16px;
+    line-height: 1;
+    font-weight: 400;
+    padding: 13px 20px;
+    background-color: #FFFFFF;
+    color: #CC9933;
+    border: 2px solid #CC9933;
+    border-radius: 15px;
+  }
 
   /*Header*/
   .header-initial-container {
     display: flex;
     justify-content:space-between; 
+    align-items: center;
+    margin-top: 30px;
     margin-bottom: 30px;
   }
+  .header-initial-left{
+    display: flex;
+    align-items: center;
+  }
+  .header-initial-left-logo{
+    margin-right: 40px;
+  }
+  .header-initial-left-link {
+    font-style: 20px;
+    line-height: 20px;
+    font-weight: 500;
+    color: #666666;
+  }
+  .header-initial-right-img {
+    margin-right: 3px;
+  }
+  .header-initial-right-cabinet{
+    font-style: 16px;
+    font-weight: 400;
+    line-height: 1;
+    color: #CC9933;
+  }
   .header-navigation-container {
+    height: 70px;
     display: flex;
     justify-content:space-between;  
+    align-items: center;
     margin-bottom: 70px;
+    background-color: #FFFFFF;
+    outline: 1px solid #FFFFFF;
+    border-radius: 15px;
   }
   .header-nav-list {
     display: flex;
     justify-content:space-evenly;  
   }
   .header-nav-item {
+    font-style: 16px;
+    font-weight: 400;
+    line-height: 1;
     padding-left: 45px;
   }
-
+  .header-nav-link{
+    color: #666666;
+  }
+  .btn-header-navigation:not(:last-child){
+    margin-right: 54px;
+  }
+  
   /*Special*/
   .section-speciall-addblock{
     display: flex;
