@@ -359,6 +359,102 @@
         </ul>
       </div>
     </section>
+    <section class="section-form container">
+      <div class="container form-container">
+        <h2 class="section-heading form-title">Хочу тур</h2>
+        <form action="https://jsonplaceholder.typicode.com/posts" method="post" class="form-main">
+          <label class="form-item">
+            <span class="form-text">Город вылета</span>
+            <select required name="Departation" class="form-input">
+              <option value="Москва">Москва</option>
+              <option value="Санкт-Питербург">Санкт-Питербург</option>
+              <option value="Екатеринбург">Екатеринбург</option>
+              <option value="Калининград">Калининград</option>
+              <option value="Сочи">Сочи</option>
+              <option value="Владивосток">Владивосток</option>
+            </select>
+          </label>
+          <label class="form-item">
+            <span class="form-text">Страна</span>
+            <select required name="Arrival" class="form-input">
+              <option value="Австралия">Австралия</option>
+              <option value="Албания">Албания</option>
+              <option value="Вьетнам">Вьетнам</option>
+              <option value="Египет">Египет</option>
+              <option value="Индия">Индия</option>
+              <option value="Италия">Италия</option>
+              <option value="Испания">Испания</option>
+              <option value="Мальдивы">Мальдивы</option>
+              <option value="Португалия">Португалия</option>
+              <option value="Тайланд">Тайланд</option>
+              <option value="Турция">Турция</option>
+              <option value="ОАЭ">ОАЭ</option>
+            </select>
+          </label>
+          <label class="form-item">
+            <span class="form-text">Дата прибытия</span>
+            <input type="date" class="form-input" name="trip-start" value="2023-02-01" min="2023-02-01" max="2023-12-31">
+          </label>
+          <label class="form-item">
+            <span class="form-text">Ночей</span>
+            <input type="number" required name="Ночей" class="form-input form-input-underline" min="1" value="6">
+          </label>
+          <label class="form-item">
+            <span class="form-text">Туристы</span>
+            <input type="number" required name="Туристы" class="form-input form-input-underline" min="1" value="2">
+          </label>
+          <button type="submit" class="btn btn-form">
+            Найти
+          </button>
+        </form>
+      </div>
+    </section>
+    <section class="section-contacts">
+      <div class="container">
+        <h2 class="section-heading">Контакты</h2>
+        <div class="section-contacts-contactbox">
+          <div class="contactbox-left">
+            <div class="contactbox-left-top">
+              <div class="contactbox-left-top-row">
+                <strong class="contactbox-strongtext">Адрес</strong>
+                <div class="contactbox-left-top-row-column">
+                  <p class="contactbox-text">Москва, улица Юности, дом 5 строение 4, офис 2</p>
+                  </div>
+              </div>
+              <div class="contactbox-left-top-row">
+                <strong class="contactbox-strongtext">Телефоны</strong>
+                <div class="contactbox-left-top-row-column">
+                  <a href="tel:+74995356434" class="section-link">+7 499 535-64-34</a>
+                  <br>
+                  <a href="tel:+74950050544" class="section-link">+7 495 005-05-44</a>
+                </div>
+              </div>
+              <div class="contactbox-left-top-row">
+                <strong class="contactbox-strongtext">Email</strong>
+                <div class="contactbox-left-top-row-column">
+                  <a href="mailto: lg.oona@mail.ru" class="section-link">lg.oona@mail.ru</a>
+                  <p class="contactbox-mail-info">по вопросам бронирования</p>
+                  <a href="mailto: hotels.ln@mail.ru" class="section-link">hotels.ln@mail.ru</a>
+                  <p class="contactbox-mail-info">по вопросам сотрудничества</p>
+                </div>
+              </div>
+              <div class="contactbox-left-top-row">
+                <strong class="contactbox-strongtext">График</strong>
+                <div class="contactbox-left-top-row-column">
+                  <p class="contactbox-text">Понедельник-пятница, с 10:00 до 19:00</p>
+                </div>
+              </div>
+            </div>
+            <div class="contactbox-left-bottom">
+              <button class="btn">Построить маршрут</button>
+            </div>
+          </div>
+          <div class="contactbox-right">
+            <img src="/img/contact.png" alt="Office">
+          </div>
+          </div>
+        </div>
+    </section>
   </main>
 </body>
 </html>
