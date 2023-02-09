@@ -438,6 +438,7 @@ img {
   display: flex;
   justify-content: space-between;
   padding: 45px;
+  margin-bottom: 40px;
   background: #FFFFFF;
   border-radius: 15px;
 }
@@ -476,4 +477,51 @@ color: #999999;
 }
 .contactbox-right{
   align-self: self-end;
+}
+
+/* Footer */
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  height: 341px;
+  padding: 45px;
+  margin-bottom: 10px;
+  background: url('/img/sun.svg') bottom right 176px no-repeat #333333;
+  border-radius: 15px;
+  
+}
+.footer-initial-container-left{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 0 0 28%;
+}
+.footer-initial-container-center {
+  flex: 0 0 40%;
+}
+.footer-initial-container-right {
+  display: flex;
+  flex-direction: column;
+}
+.footer-text {
+  font-size: 16px;
+  line-height: 190%;
+  font-weight: 400;
+  color: #FFFFFF;
+}
+.footer-container-left-element{
+ flex: 0 1 40%; 
+}
+.footer-container-center-element {
+  margin-bottom: 15px;
+}
+.footer-adress {
+  font-size: 16px;
+  line-height: 30px;
+  font-weight: 400;
+  color: #FFFFFF;
+}
+.footer-container-right-element {
+  margin-bottom: 20px;
 }
