@@ -31,6 +31,12 @@
        url('../fonts/MullerBold.woff') format('woff');
 }
 
+:root {
+  --color-orange: #CC9933;
+  --color-white: #FFFFFF;
+  --color-gray: #999999;
+}
+
 * {
  box-sizing: border-box;
 }
@@ -42,6 +48,14 @@ body {
 }
 a {
   text-decoration: none;
+  transition-property: color font-size;
+  transition-duration: 0.3s;
+  transition-timing-function: ease;
+}
+a:hover {
+  cursor: pointer;
+  font-size: 18px;
+  color: orange;
 }
 p{
   margin: 0;
@@ -81,10 +95,18 @@ img {
   line-height: 1;
   font-weight: 400;
   padding: 13px 20px;
-  background-color: #FFFFFF;
-  color: #CC9933;
+  background-color: var(--color-white);
+  color: var(--color-orange);
   border: 2px solid #CC9933;
   border-radius: 15px;
+  transition-property: color background-color;
+  transition-duration: 0.3s;
+  transition-timing-function: ease;
+}
+.btn:hover{
+  cursor: pointer;
+  color: white;
+  background-color:  var(--color-orange);
 }
 .section-link{
   color: #F0BF5F;
@@ -121,7 +143,7 @@ img {
     font-size: 16px;
     font-weight: 400;
     line-height: 1;
-    color: #CC9933;
+    color: var(--color-orange);
   }
   .header-navigation-container {
     display: flex;
@@ -131,8 +153,8 @@ img {
     justify-content:space-between;  
     align-items: center;
     margin-bottom: 70px;
-    background-color: #FFFFFF;
-    outline: 1px solid #FFFFFF;
+    background-color: var(--color-white);
+    outline: 1px solid var(--color-white);
     border-radius: 15px;
   }
   .header-nav-list {
@@ -161,18 +183,22 @@ img {
   border-radius: 15px;
 }
 .section-special-left-heading{
+  position: relative;
   font-size: 40px;
   line-height: 40px;
   font-weight: 700;
-  color: #FFFFFF;
+  color: var(--color-white);
+  z-index: 1;
 }
 .section-special-left-price {
+  position: relative;
   margin-top: 15px;
   margin-bottom: 47px;
   font-size: 20px;
   line-height: 20px;
   font-weight: 400;
-  color: #FFFFFF;
+  color: var(--color-white);
+  z-index: 1;
 }
 .section-special-podrobney {
   font-size: 16px;
@@ -180,13 +206,40 @@ img {
   font-weight: 400;
 }
 .section-special-left-top {
+  position: relative;
   background: url('/img/spec-maldives.png') right center no-repeat #E5E5E5;
   background-size: contain;
-
+  }
+ .section-special-left-top::before{ 
+  content: '';
+	display: block;
+  position: absolute;
+	width: 50%;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: linear-gradient(90deg, rgba(48, 64, 89, 0.84) -2.9%, rgba(53, 65, 83, 0) 65.7%);
+  border-radius: 15px;
+  z-index: 0;
 }
 .section-special-left-buttom {
+  position: relative;
   background: url('/img/spec-crit.png') right center no-repeat #E5E5E5;
   background-size: contain;
+}
+.section-special-left-buttom::before{ 
+  content: '';
+	display: block;
+  position: absolute;
+	width: 50%;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: linear-gradient(90deg, rgba(48, 64, 89, 0.84) -2.9%, rgba(53, 65, 83, 0) 65.7%);
+  border-radius: 15px;
+  z-index: 0;
 }
 .section-speciall-addblock{
   display: flex;
@@ -218,7 +271,7 @@ img {
   font-size: 60px;
   line-height: 60px;
   font-weight: 700;
-  color: #FFFFFF;
+  color: var(--color-white);
 
 }
 .section-special-right-price {
@@ -227,12 +280,14 @@ img {
   font-size: 30px;
   line-height: 30px;
   font-weight: 400;
-  color: #FFFFFF;
+  color: var(--color-white);
 }
 .section-special-podrobney {
+position: relative;
   font-size: 16px;
   line-height: 16px;
   font-weight: 400;
+  z-index: 1;
 }
 
 /*About*/
@@ -296,7 +351,7 @@ img {
 
 }
 .section-preimushestva-item {
-    flex: 1 1 23%;
+    flex: 0 1 23%;
     margin-bottom: 22px; 
     padding: 40px 42px 32px 45px;  
     background: #FFFFFF;
@@ -343,20 +398,18 @@ img {
   font-size: 16px;
   line-height: 16px;
   font-weight: 400;
-  color: #999999;
+  color: var(--color-gray);
 }
 .section-razmeshenie-price {
   padding-right: 4px;
   font-size: 20px;
   line-height: 20px;
   font-weight: 700;
-  color: #000000;
 }
 .section-razmeshenie-count {
   font-size: 16px;
   line-height: 16px;
   font-weight: 400;
-  color: #000000;
 }
 .section-razmeshenie-reiting {
   padding-right: 45px;
@@ -368,10 +421,11 @@ img {
 .section-razmeshenie-location {
   margin-bottom: 20px;
   line-height: 16px;
-  color: #999999;
+  color: var(--color-gray)
 }
 .section-razmeshenie-other {
-  background: url('/img/razmesh-dop.png') left top no-repeat #FFFFFF;
+  position: relative;
+  background: url('/img/razmesh-dop.png') left top no-repeat var(--color-white);
   background-size: contain;
 }
 .section-razmeshenie-variaty {
@@ -381,12 +435,20 @@ img {
   font-size: 20px;
   line-height: 200%;
   font-weight: 500;
-  color: #FFFFFF;
+  color: var(--color-white);
+}
+.section-razmeshenie-variaty::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 .section-razmeshenie-rectangle {
   display: inline;
   transform: translate(4px, 4px);
-  color: #FFFFFF;
+  color: var(--color-white);
 }
 
 /*Form*/
@@ -473,7 +535,7 @@ img {
   font-size: 16px;
 line-height: 24px;
 font-weight: 400;
-color: #999999;
+color: var(--color-gray);
 }
 .contactbox-right{
   align-self: self-end;
@@ -508,7 +570,7 @@ color: #999999;
   font-size: 16px;
   line-height: 190%;
   font-weight: 400;
-  color: #FFFFFF;
+  color: var(--color-white);
 }
 .footer-container-left-element{
  flex: 0 1 40%; 
@@ -520,7 +582,7 @@ color: #999999;
   font-size: 16px;
   line-height: 30px;
   font-weight: 400;
-  color: #FFFFFF;
+  color: var(--color-white);
 }
 .footer-container-right-element {
   margin-bottom: 20px;
